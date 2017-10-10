@@ -3,6 +3,7 @@
 #include <omp.h>
 #include "gtmp.h"
 
+
 int main(int argc, char** argv){
     if(argc != 2){
         fprintf(stderr,"please input number of threads");
