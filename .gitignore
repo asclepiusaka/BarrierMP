@@ -1,0 +1,24 @@
+# Object files
+*.o
+
+# Executables
+*.exe
+*.out
+
+# CMake
+cmake-build-debug/
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+CMakeLists.txt
+Testing
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+
+#mac file
+.DS_Store
+
+#jetbrain
+.idea/
