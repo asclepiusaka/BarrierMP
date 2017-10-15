@@ -1,18 +1,15 @@
-CC = gcc
-CPPFLAGS = -g -Wall
-LDFLAGS = -g -Wall
-
 MPICC = mpicc
 MPICH = /usr/lib64/openmpi/1.4-gcc
-CFLAGS = -I$(MPICH)/include
+CFLAGS = -I$(MPICH)/include -g -Wall
+CLIBS = -lm
 
-all: srbarrier mcsbarrier
+all: disbarrier mcsbarrier
 
-srbarrier: srbarrier.o
-	$(MPICC) -o $@ $(LDFLAGS) $^ $(LDLIBS)
+disbarrier: disbarrier.o
+	$(MPICC) -o $@ $(CFLAGS) $^ $(CLIBS)
 
 mcsbarrier: mcsbarrier.o
-	$(MPICC) -o $@ $(LDFLAGS) $^ $(LDLIBS)
+	$(MPICC) -o $@ $(CFLAGS) $^
 
 clean:
 	rm -f *.o main

@@ -91,16 +91,19 @@ int main(int argc, char** argv) {
 
     mpi_mcs_init(MPI_COMM_WORLD, rank, num_processes);
 
-    fprintf(stdout, "Barrier Pos 1 : Process %d of %d\n", rank+1, num_processes);
-    fflush(stdout);
-    /* The barrier */
-    mpi_mcs_barrier(MPI_COMM_WORLD, rank, num_processes);
-    fprintf(stdout, "Barrier Pos 2 : Process %d of %d\n", rank+1, num_processes);
-    fflush(stdout);
-    mpi_mcs_barrier(MPI_COMM_WORLD, rank, num_processes);
-    fprintf(stdout, "Barrier Pos 3 : Process %d of %d\n", rank+1, num_processes);
-    fflush(stdout);
-/* Code after barrier ...*/
+   	FILE *file = fopen("output", "a");
+	for (int i = 0; i < num_processes; ++i) {
+    	if (rank == i ) {
+        	// my turn to write to the file
+        	fputs("Process ", file);
+        	char snum[5];
+        	snprintf(snum, 5, "%d", i);
+        	fputs(snum, file);
+        	fputs("\n",file);
+        	fflush(file);
+    	}
+    	mpi_mcs_barrier(MPI_COMM_WORLD, rank, num_processes);
+	}
 
     /* Cleanup */
     MPI_Finalize();
