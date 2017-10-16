@@ -1,5 +1,6 @@
 MPICC = mpicc
-MPICH = /usr/lib64/openmpi/1.4-gcc
+#modify MPICH as needed
+MPICH = /home/saka/.openmpi
 CFLAGS = -I$(MPICH)/include -g -Wall
 CLIBS = -lm
 

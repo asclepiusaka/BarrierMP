@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "mpi.h"
+#include <mpi.h>
 
 typedef struct mcs_node {
     int arrival_children_ranks[4];

@@ -52,43 +52,48 @@ typedef struct _node_t {
     char dummy;
 } node_t;
 
-node_t * nodes;
+node_t ** nodes;
 
 char init_sense = 1;
 
 void gtmp_init(int num_threads){
-    nodes = malloc(sizeof(node_t)*num_threads);
     int i,j;
+    nodes = (node_t **) malloc(sizeof(node_t *)*num_threads);
+    for(i = 0; i < num_threads; i++){
+        nodes[i] = (node_t*) malloc(sizeof(node_t));
+
+    }
+
 
     for(i=0;i<num_threads;i++){
         for(j=0;j<4;j++){
             if(4*i+j+1<num_threads){
-                nodes[i].havechild[j]=1;
+                nodes[i]->havechild[j]=1;
             }else{
-                nodes[i].havechild[j]=0;
+                nodes[i]->havechild[j]=0;
             }
         }
         if(i!=0){
-            nodes[i].parentpointer = &nodes[(i-1)/4].childnotready[(i-1)%4];
+            nodes[i]->parentpointer = &(nodes[(i-1)/4]->childnotready[(i-1)%4]);
         }else{
-            nodes[i].parentpointer = &(nodes[i].dummy);
+            nodes[i]->parentpointer = &(nodes[i]->dummy);
         }
 
         if(2*i+1<num_threads){
-            nodes[i].childpointers[0] = &nodes[2*i+1].parentsense;
+            nodes[i]->childpointers[0] = &nodes[2*i+1]->parentsense;
         }else{
-            nodes[i].childpointers[0] = &nodes[i].dummy;
+            nodes[i]->childpointers[0] = &nodes[i]->dummy;
         }
         if(2*i+2<num_threads){
-            nodes[i].childpointers[1] = &nodes[2*i+2].parentsense;
+            nodes[i]->childpointers[1] = &nodes[2*i+2]->parentsense;
         }else{
-            nodes[i].childpointers[1] = &nodes[i].dummy;
+            nodes[i]->childpointers[1] = &nodes[i]->dummy;
         }
 
         for(j=0;j<4;j++){
-            nodes[i].childnotready[j] = nodes[i].havechild[j];
+            nodes[i]->childnotready[j] = nodes[i]->havechild[j];
         }
-        nodes[i].parentsense = 0;
+        nodes[i]->parentsense = 0;
 
     }
 
@@ -99,18 +104,18 @@ void gtmp_barrier(){
     int vpid = omp_get_thread_num();
     int i;
     //spin locally
-    while(nodes[vpid].childnotready[0]||nodes[vpid].childnotready[1]||
-            nodes[vpid].childnotready[2]||nodes[vpid].childnotready[3]);
+    while(nodes[vpid]->childnotready[0]||nodes[vpid]->childnotready[1]||
+            nodes[vpid]->childnotready[2]||nodes[vpid]->childnotready[3]);
     for(i=0;i<4;i++){
-        nodes[vpid].childnotready[i] = nodes[vpid].havechild[i];
+        nodes[vpid]->childnotready[i] = nodes[vpid]->havechild[i];
     }
 
-    *(nodes[vpid].parentpointer) = 0;
+    *(nodes[vpid]->parentpointer) = 0;
     if(vpid!=0){
-        while(nodes[vpid].parentsense != sense);
+        while(nodes[vpid]->parentsense != sense);
     }
-    *nodes[vpid].childpointers[0] = sense;
-    *nodes[vpid].childpointers[1] = sense;
+    *nodes[vpid]->childpointers[0] = sense;
+    *nodes[vpid]->childpointers[1] = sense;
 
     init_sense = !sense;
 

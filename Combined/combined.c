@@ -2,7 +2,7 @@
 // Created by saka on 10/10/17.
 //
 #include "../OpenMP/gtmp.h"
-#include "../MPI/srbarrier.c"
+#include "../MPI/disbarrier.c"
 #include <stdio.h>
 #include <stdlib.h>
 #include <omp.h>
@@ -31,6 +31,7 @@ int main(int argc, char** argv){
     omp_set_num_threads(num_threads);
     gtmp_init(num_threads);
 
+
     //mpi
 
     struct timespec start,end,duration;
@@ -42,7 +43,7 @@ int main(int argc, char** argv){
     /* Making sure that we got the correct number of processes */
     MPI_Comm_size(MPI_COMM_WORLD, &num_processes);
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-
+    mpi_dis_init();
     clock_gettime(CLOCK_MONOTONIC,&start);
 #pragma omp parallel
     {
@@ -59,7 +60,7 @@ int main(int argc, char** argv){
 
             gtmp_barrier();
             if (thread_num == 0) {
-                mpi_sr_barrier(MPI_COMM_WORLD, rank, num_processes);
+                mpi_dis_barrier();
             }
             gtmp_barrier();//OpenMP barrier again
         }
@@ -71,6 +72,7 @@ int main(int argc, char** argv){
 
     clock_gettime(CLOCK_MONOTONIC,&end);
     MPI_Finalize();
+    mpi_dis_finalize();
     gtmp_finalize();
     duration.tv_sec =  end.tv_sec - start.tv_sec;
     duration.tv_nsec = end.tv_nsec - start.tv_nsec;
