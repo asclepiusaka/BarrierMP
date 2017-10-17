@@ -59,7 +59,7 @@ int main(int argc, char** argv){
         duration.tv_sec--;
         duration.tv_nsec += 1000000000;
     }
-    printf("average time used in micro second %ld\n",(duration.tv_sec*1000000+duration.tv_nsec/1000));
+    printf("average time used in nano second %ld\n",(duration.tv_sec*100000+duration.tv_nsec/10000));
 
     return(0);
 }

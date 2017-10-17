@@ -2,12 +2,13 @@
 // Created by saka on 10/10/17.
 //
 #include "../OpenMP/gtmp.h"
-#include "../MPI/disbarrier.c"
+#include "../MPI/disbarrier_lib.c"
 #include <stdio.h>
 #include <stdlib.h>
 #include <omp.h>
 #include <mpi.h>
 #include <time.h>
+#define _POSIX_C_SOURCE >= 199309L
 
 int main(int argc, char** argv){
     if(argc != 2){
@@ -52,7 +53,7 @@ int main(int argc, char** argv){
         int thread_num = omp_get_thread_num();
         num_threads = omp_get_num_threads();
 
-        printf("thread %4d of %4d threads from node %4d reaches barrier\n",thread_num,num_threads,rank);
+        //printf("thread %4d of %4d threads from node %4d reaches barrier\n",thread_num,num_threads,rank);
 
         /* The barrier*/
         int i;
@@ -66,7 +67,7 @@ int main(int argc, char** argv){
         }
 
         /*Some code after the barrier..... */
-        printf("thread %4d of %4d threads from node %4d get through the barrier\n",thread_num,num_threads,rank);
+        //printf("thread %4d of %4d threads from node %4d get through the barrier\n",thread_num,num_threads,rank);
 
     }
 
@@ -84,7 +85,7 @@ int main(int argc, char** argv){
         duration.tv_sec--;
         duration.tv_nsec += 1000000000;
     }
-    printf("average time used in nano second %ld\n",(duration.tv_sec*1000000+duration.tv_nsec/1000));
+    printf("average time used in nano second %ld\n",(duration.tv_sec*100000+duration.tv_nsec/10000));
 
     return 0;
 
