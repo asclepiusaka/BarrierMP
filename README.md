@@ -1,8 +1,11 @@
 # BarrierMP
-TODO:
+## TODO:
 1. Modify main to meet the paper experiments
 2. Design experiments.
 3. Read Jinx and write script and test scripts.
 4. Run jobs
 5. Collect and process data
 6. Write up experiment report
+
+## experiments strategy:
+run makefile as interactive job, and then batch test through warpper script. 
