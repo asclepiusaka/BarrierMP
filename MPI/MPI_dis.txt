@@ -1,0 +1,49 @@
+======== MPI dissemination ========
+result for 2 nodes
+Average time used in micro second 0.432968
+Average time used in micro second 0.432968
+result for 4 nodes
+Average time used in micro second 1.202822
+Average time used in micro second 1.053810
+Average time used in micro second 1.228809
+Average time used in micro second 1.196861
+result for 6 nodes
+Average time used in micro second 1.564026
+Average time used in micro second 1.737118
+Average time used in micro second 1.707077
+Average time used in micro second 1.735926
+Average time used in micro second 1.688957
+Average time used in micro second 1.659155
+result for 8 nodes
+Average time used in micro second 1.819849
+Average time used in micro second 1.844883
+Average time used in micro second 1.826048
+Average time used in micro second 1.780033
+Average time used in micro second 1.774073
+Average time used in micro second 1.847029
+Average time used in micro second 1.738071
+Average time used in micro second 1.642942
+result for 10 nodes
+Average time used in micro second 2.282143
+Average time used in micro second 2.568960
+Average time used in micro second 2.499104
+Average time used in micro second 2.502918
+Average time used in micro second 2.499104
+Average time used in micro second 2.473116
+Average time used in micro second 2.444983
+Average time used in micro second 2.573013
+Average time used in micro second 2.413988
+Average time used in micro second 2.392054
+result for 12 nodes
+Average time used in micro second 2.599001
+Average time used in micro second 2.563000
+Average time used in micro second 2.392054
+Average time used in micro second 2.532959
+Average time used in micro second 2.269983
+Average time used in micro second 2.460957
+Average time used in micro second 2.476931
+Average time used in micro second 2.434015
+Average time used in micro second 2.397060
+Average time used in micro second 2.563000
+Average time used in micro second 2.598047
+Average time used in micro second 2.366066

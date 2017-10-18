@@ -93,7 +93,7 @@ int main(int argc, char** argv) {
 
     t2 = MPI_Wtime();
 
-    printf("Average time used in micro second %f\n", (t2 - t1) * 1000000);
+    printf("Average time used in micro second %f\n", (t2 - t1) * 1000);
  
     /*
     FILE *file = fopen("output", "a");

@@ -1,0 +1,49 @@
+======== MPI mcs tree ========
+result for 2 threads
+Average time used in micro second 5.149126
+Average time used in micro second 5.150080
+result for 4 threads
+Average time used in micro second 6.108999
+Average time used in micro second 6.178856
+Average time used in micro second 6.188869
+Average time used in micro second 6.177902
+result for 6 threads
+Average time used in micro second 7.025003
+Average time used in micro second 6.989002
+Average time used in micro second 7.025003
+Average time used in micro second 6.978035
+Average time used in micro second 6.940126
+Average time used in micro second 6.829023
+result for 8 threads
+Average time used in micro second 7.601976
+Average time used in micro second 7.602930
+Average time used in micro second 7.601976
+Average time used in micro second 7.552862
+Average time used in micro second 7.406950
+Average time used in micro second 7.602930
+Average time used in micro second 7.511854
+Average time used in micro second 7.503033
+result for 10 threads
+Average time used in micro second 7.830143
+Average time used in micro second 7.793188
+Average time used in micro second 7.943869
+Average time used in micro second 7.962942
+Average time used in micro second 7.943869
+Average time used in micro second 7.941961
+Average time used in micro second 7.773161
+Average time used in micro second 7.884979
+Average time used in micro second 7.856131
+Average time used in micro second 7.978916
+result for 12 threads
+Average time used in micro second 8.076191
+Average time used in micro second 8.061171
+Average time used in micro second 8.011818
+Average time used in micro second 8.275032
+Average time used in micro second 8.219004
+Average time used in micro second 8.227110
+Average time used in micro second 8.208990
+Average time used in micro second 8.166075
+Average time used in micro second 8.151054
+Average time used in micro second 8.123159
+Average time used in micro second 8.094072
+Average time used in micro second 8.275032

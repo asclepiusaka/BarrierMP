@@ -34,6 +34,8 @@ int main(int argc, char** argv) {
   /* Making sure that we got the correct number of processes */
   MPI_Comm_size(MPI_COMM_WORLD, &P);
   MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+  
+  mpi_dis_init();
 
   double t1, t2;
   t1 = MPI_Wtime();
@@ -44,7 +46,7 @@ int main(int argc, char** argv) {
 
   t2 = MPI_Wtime();
 
-  printf("Average time used in micro second %f\n", (t2 - t1) * 1000000);
+  printf("Average time used in micro second %f\n", (t2 - t1) * 1000);
    /*
 FILE *file = fopen("output", "a");
    mpi_dis_init();
