@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <mpi.h>
+#include "mpi.h"
 
 typedef struct mcs_node {
     int arrival_children_ranks[4];
@@ -15,9 +15,7 @@ typedef struct mcs_node {
 
 static mcs_node_myt *mynode;
 
-void mpi_mcs_init(int num_processes) {
-	int rank;
-	MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+void mpi_mcs_init(MPI_Comm comm, int rank, int num_processes) {
     mynode = (mcs_node_myt *)malloc(sizeof(mcs_node_myt));
     for (int i = 0; i < 4; i++) {
         if (4 * rank + i + 1 < num_processes) {
@@ -44,28 +42,26 @@ void mpi_mcs_init(int num_processes) {
     }
 }
 
-void mpi_mcs_barrier() {
-	int rank;
-	MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+void mpi_mcs_barrier(MPI_Comm comm, int rank, int num_processes) {
     for (int i = 0; i < 4; i++) {
         int child_rank = mynode->arrival_children_ranks[i];
         if (child_rank != -1) {
-            MPI_Recv(NULL, 0, MPI_INT, child_rank, 0, MPI_COMM_WORLD, NULL);
+            MPI_Recv(NULL, 0, MPI_INT, child_rank, 0, comm, NULL);
         }
     }
     if (rank != 0) {
-        MPI_Send(NULL, 0, MPI_INT, mynode->arrival_parent_rank, 0, MPI_COMM_WORLD);
-        MPI_Recv(NULL, 0, MPI_INT, mynode->wakeup_parent_rank, 1, MPI_COMM_WORLD, NULL);
+        MPI_Send(NULL, 0, MPI_INT, mynode->arrival_parent_rank, 0, comm);
+        MPI_Recv(NULL, 0, MPI_INT, mynode->wakeup_parent_rank, 1, comm, NULL);
     }
     for (int i = 0; i < 2; i++) {
         int child_rank = mynode->wakeup_children_ranks[i];
         if (child_rank != -1) {
-            MPI_Send(NULL, 0, MPI_INT, child_rank, 1, MPI_COMM_WORLD);
+            MPI_Send(NULL, 0, MPI_INT, child_rank, 1, comm);
         }
     }
     // The barrier did work, but it's too fast that some printing jobs before the barrier may not have finished yet.
     // So we need to slow down explicitly to clearly see the effect of the barrier
-//     for (int i = 0; i < 2000; i++);
+    for (int i = 0; i < 2000; i++);
 }
 
 void mpi_mcs_finalize() {
@@ -75,7 +71,6 @@ void mpi_mcs_finalize() {
 }
 
 int main(int argc, char** argv) {
-    int req_processes = 6;
     int num_processes;
     int rank;
 
@@ -87,22 +82,19 @@ int main(int argc, char** argv) {
     MPI_Comm_size(MPI_COMM_WORLD, &num_processes);
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 
-    if(num_processes != req_processes){
-        fprintf(stderr, "Wrong number of processes.  Required: %d, Actual: %d\n",
-                req_processes, num_processes);
-        exit(1);
-    }
-
+    mpi_mcs_init(MPI_COMM_WORLD, rank, num_processes);
+    
     double t1, t2;
     t1 = MPI_Wtime();
 
     for (int i = 0; i < 1000; i++) {
-        mpi_mcs_barrier();
+        mpi_mcs_barrier(MPI_COMM_WORLD, rank, num_processes);
     }
 
     t2 = MPI_Wtime();
 
     printf("Average time used in micro second %f\n", (t2 - t1) * 1000000);
+ 
     /*
     FILE *file = fopen("output", "a");
     mpi_dis_init();

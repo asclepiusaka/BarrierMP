@@ -27,7 +27,6 @@ void mpi_dis_finalize() {
 }
 
 int main(int argc, char** argv) {
-  int req_processes = 6;
   MPI_Init(&argc, &argv);
 
   /* Start of Parallel...*/
@@ -36,11 +35,6 @@ int main(int argc, char** argv) {
   MPI_Comm_size(MPI_COMM_WORLD, &P);
   MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 
-  if(P != req_processes){
-    fprintf(stderr, "Wrong number of processes.  Required: %d, Actual: %d\n",
-    req_processes, P);
-    exit(1);
-  }
   double t1, t2;
   t1 = MPI_Wtime();
 
