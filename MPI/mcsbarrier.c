@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <mpi.h>
-#include <time.h>
 
 typedef struct mcs_node {
     int arrival_children_ranks[4];
@@ -45,7 +44,7 @@ void mpi_mcs_init(int num_processes) {
     }
 }
 
-void mpi_mcs_barrier(int num_processes) {
+void mpi_mcs_barrier() {
 	int rank;
 	MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     for (int i = 0; i < 4; i++) {
@@ -94,26 +93,16 @@ int main(int argc, char** argv) {
         exit(1);
     }
 
-    struct timespec start, end, duration;
-    clock_gettime(CLOCK_MONOTONIC, &start);
+    double t1, t2;
+    t1 = MPI_Wtime();
 
     for (int i = 0; i < 1000; i++) {
         mpi_mcs_barrier();
     }
 
-    clock_gettime(CLOCK_MONOTONIC, &end);
+    t2 = MPI_Wtime();
 
-    duration.tv_sec =  end.tv_sec - start.tv_sec;
-    duration.tv_nsec = end.tv_nsec - start.tv_nsec;
-    while (duration.tv_nsec > 1000000000) {
-        duration.tv_sec++;
-        duration.tv_nsec -= 1000000000;
-    }
-    while (duration.tv_nsec < 0) {
-        duration.tv_sec--;
-        duration.tv_nsec += 1000000000;
-    }
-    printf("Average time used in nano second %ld\n", (duration.tv_sec*100000+duration.tv_nsec/10000));
+    printf("Average time used in micro second %f\n", (t2 - t1) * 1000000);
     /*
     FILE *file = fopen("output", "a");
     mpi_dis_init();
