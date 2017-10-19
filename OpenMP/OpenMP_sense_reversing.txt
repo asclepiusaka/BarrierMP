@@ -1,0 +1,15 @@
+======== OpenMP_sense_reversing ========
+result for 2 threads
+average time used in nano second 2789
+result for 3 threads
+average time used in nano second 4178
+result for 4 threads
+average time used in nano second 5658
+result for 5 threads
+average time used in nano second 6691
+result for 6 threads
+average time used in nano second 7713
+result for 7 threads
+average time used in nano second 9078
+result for 8 threads
+average time used in nano second 9744

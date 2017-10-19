@@ -1,0 +1,480 @@
+
+======== Combined barrier ========
+running for 2 nodes
+result for 2 thread
+average time used in nano second 643
+average time used in nano second 649
+result for 3 thread
+average time used in nano second 32138166
+average time used in nano second 35478020
+result for 4 thread
+average time used in nano second 40046445
+average time used in nano second 40446162
+result for 5 thread
+average time used in nano second 53218338
+average time used in nano second 53418019
+result for 6 thread
+average time used in nano second 60616835
+average time used in nano second 67856096
+result for 7 thread
+average time used in nano second 92568481
+average time used in nano second 94116368
+result for 8 thread
+average time used in nano second 111366359
+average time used in nano second 112616388
+result for 9 thread
+average time used in nano second 120016972
+average time used in nano second 124198526
+result for 10 thread
+average time used in nano second 114126444
+average time used in nano second 144066341
+result for 11 thread
+average time used in nano second 140268206
+average time used in nano second 140668481
+result for 12 thread
+average time used in nano second 164076393
+average time used in nano second 172386297
+
+running for 3 nodes
+result for 2 thread
+average time used in nano second 671
+average time used in nano second 613
+average time used in nano second 678
+result for 3 thread
+average time used in nano second 34278368
+average time used in nano second 35676813
+average time used in nano second 39678181
+result for 4 thread
+average time used in nano second 39876365
+average time used in nano second 40076439
+average time used in nano second 42968205
+result for 5 thread
+average time used in nano second 50756165
+average time used in nano second 53416246
+average time used in nano second 57125897
+result for 6 thread
+average time used in nano second 61238157
+average time used in nano second 61336429
+average time used in nano second 63268218
+result for 7 thread
+average time used in nano second 96518288
+average time used in nano second 96576647
+average time used in nano second 101518447
+result for 8 thread
+average time used in nano second 112727825
+average time used in nano second 112116180
+average time used in nano second 118676351
+result for 9 thread
+average time used in nano second 122138097
+average time used in nano second 115638234
+average time used in nano second 135056604
+result for 10 thread
+average time used in nano second 113926474
+average time used in nano second 115528032
+average time used in nano second 121416824
+result for 11 thread
+average time used in nano second 137506074
+average time used in nano second 137206205
+average time used in nano second 147806614
+result for 12 thread
+average time used in nano second 152736383
+average time used in nano second 164507900
+average time used in nano second 167926564
+
+running for 4 nodes
+result for 2 thread
+average time used in nano second 712
+average time used in nano second 680
+average time used in nano second 739
+average time used in nano second 736
+result for 3 thread
+average time used in nano second 33904746
+average time used in nano second 24005506
+average time used in nano second 31203350
+average time used in nano second 35805436
+result for 4 thread
+average time used in nano second 39445391
+average time used in nano second 40055627
+average time used in nano second 39843857
+average time used in nano second 40245037
+result for 5 thread
+average time used in nano second 57183474
+average time used in nano second 54173419
+average time used in nano second 53703261
+average time used in nano second 57804147
+result for 6 thread
+average time used in nano second 60114103
+average time used in nano second 60412604
+average time used in nano second 60444926
+average time used in nano second 62113034
+result for 7 thread
+average time used in nano second 101772731
+average time used in nano second 98663432
+average time used in nano second 94662574
+average time used in nano second 105633272
+result for 8 thread
+average time used in nano second 150102759
+average time used in nano second 147502014
+average time used in nano second 143002865
+average time used in nano second 156902674
+result for 9 thread
+average time used in nano second 135952760
+average time used in nano second 136104775
+average time used in nano second 133252826
+average time used in nano second 138673149
+result for 10 thread
+average time used in nano second 137882765
+average time used in nano second 115484550
+average time used in nano second 131183947
+average time used in nano second 139683132
+result for 11 thread
+average time used in nano second 147532925
+average time used in nano second 150212408
+average time used in nano second 151483041
+average time used in nano second 152003244
+result for 12 thread
+average time used in nano second 176112284
+average time used in nano second 147532551
+average time used in nano second 174245241
+average time used in nano second 178685195
+
+running for 5 nodes
+result for 2 thread
+average time used in nano second 679
+average time used in nano second 654
+average time used in nano second 656
+average time used in nano second 713
+average time used in nano second 1287
+result for 3 thread
+average time used in nano second 25854267
+average time used in nano second 25143710
+average time used in nano second 23844495
+average time used in nano second 32752844
+average time used in nano second 32644641
+result for 4 thread
+average time used in nano second 40013184
+average time used in nano second 39214751
+average time used in nano second 39814435
+average time used in nano second 39814054
+average time used in nano second 40414380
+result for 5 thread
+average time used in nano second 46403295
+average time used in nano second 54113054
+average time used in nano second 54403920
+average time used in nano second 55113507
+average time used in nano second 56611109
+result for 6 thread
+average time used in nano second 59935227
+average time used in nano second 65842859
+average time used in nano second 60435599
+average time used in nano second 64742181
+average time used in nano second 67434947
+result for 7 thread
+average time used in nano second 94652541
+average time used in nano second 98032708
+average time used in nano second 97182116
+average time used in nano second 101484821
+average time used in nano second 102581349
+result for 8 thread
+average time used in nano second 123652874
+average time used in nano second 135302974
+average time used in nano second 137252753
+average time used in nano second 143102728
+average time used in nano second 145862989
+result for 9 thread
+average time used in nano second 132764259
+average time used in nano second 116973459
+average time used in nano second 130712542
+average time used in nano second 119614664
+average time used in nano second 143513037
+result for 10 thread
+average time used in nano second 129284032
+average time used in nano second 119051452
+average time used in nano second 128851873
+average time used in nano second 130601826
+average time used in nano second 136751677
+result for 11 thread
+average time used in nano second 146771785
+average time used in nano second 136420986
+average time used in nano second 142492419
+average time used in nano second 152222025
+average time used in nano second 167512059
+result for 12 thread
+average time used in nano second 166584704
+average time used in nano second 158935246
+average time used in nano second 148424538
+average time used in nano second 159532569
+average time used in nano second 176734557
+
+
+running for 6 nodes
+result for 2 thread
+average time used in nano second 688
+average time used in nano second 661
+average time used in nano second 705
+average time used in nano second 1010
+average time used in nano second 734
+average time used in nano second 642
+result for 3 thread
+average time used in nano second 28433140
+average time used in nano second 21433842
+average time used in nano second 28934571
+average time used in nano second 34034858
+average time used in nano second 30732874
+average time used in nano second 38734718
+result for 4 thread
+average time used in nano second 39314395
+average time used in nano second 40015155
+average time used in nano second 39914631
+average time used in nano second 40014399
+average time used in nano second 39720916
+average time used in nano second 40014322
+result for 5 thread
+average time used in nano second 52852597
+average time used in nano second 53722554
+average time used in nano second 52024968
+average time used in nano second 53851848
+average time used in nano second 51724550
+average time used in nano second 58924662
+result for 6 thread
+average time used in nano second 60592576
+average time used in nano second 60795120
+average time used in nano second 61194826
+average time used in nano second 60592086
+average time used in nano second 60094585
+average time used in nano second 64194817
+result for 7 thread
+average time used in nano second 92382607
+average time used in nano second 101582473
+average time used in nano second 101182661
+average time used in nano second 102153217
+average time used in nano second 87134158
+average time used in nano second 118482358
+result for 8 thread
+average time used in nano second 147152784
+average time used in nano second 112983458
+average time used in nano second 140964313
+average time used in nano second 116783942
+average time used in nano second 145752315
+average time used in nano second 151932660
+result for 9 thread
+average time used in nano second 126284083
+average time used in nano second 118722658
+average time used in nano second 127372381
+average time used in nano second 124424163
+average time used in nano second 127322179
+average time used in nano second 131982392
+result for 10 thread
+average time used in nano second 133192333
+average time used in nano second 120142006
+average time used in nano second 122992204
+average time used in nano second 124143940
+average time used in nano second 136362652
+average time used in nano second 147594167
+result for 11 thread
+average time used in nano second 147222916
+average time used in nano second 148592842
+average time used in nano second 144225396
+average time used in nano second 154524569
+average time used in nano second 145973156
+average time used in nano second 159803045
+result for 12 thread
+average time used in nano second 141271325
+average time used in nano second 170112031
+average time used in nano second 137813509
+average time used in nano second 148813519
+average time used in nano second 162870721
+average time used in nano second 214042781
+
+
+running for 7 nodes
+result for 2 thread
+average time used in nano second 723
+average time used in nano second 664
+average time used in nano second 720
+average time used in nano second 660
+average time used in nano second 689
+average time used in nano second 657
+average time used in nano second 734
+result for 3 thread
+average time used in nano second 32982493
+average time used in nano second 26479916
+average time used in nano second 32284221
+average time used in nano second 28983783
+average time used in nano second 25382259
+average time used in nano second 25683805
+average time used in nano second 39783889
+result for 4 thread
+average time used in nano second 40013436
+average time used in nano second 39813682
+average time used in nano second 39213386
+average time used in nano second 40013546
+average time used in nano second 35590411
+average time used in nano second 40014349
+average time used in nano second 41613738
+result for 5 thread
+average time used in nano second 47431274
+average time used in nano second 55340821
+average time used in nano second 58334491
+average time used in nano second 57334546
+average time used in nano second 50224822
+average time used in nano second 58001618
+average time used in nano second 68232870
+result for 6 thread
+average time used in nano second 60003489
+average time used in nano second 59803513
+average time used in nano second 62741790
+average time used in nano second 61511725
+average time used in nano second 62212530
+average time used in nano second 60803430
+average time used in nano second 64210268
+result for 7 thread
+average time used in nano second 97160432
+average time used in nano second 93970920
+average time used in nano second 96302418
+average time used in nano second 91560706
+average time used in nano second 89300414
+average time used in nano second 86370704
+average time used in nano second 101801209
+result for 8 thread
+average time used in nano second 137202398
+average time used in nano second 142552573
+average time used in nano second 138662501
+average time used in nano second 139442326
+average time used in nano second 109041394
+average time used in nano second 139172767
+average time used in nano second 150742519
+result for 9 thread
+average time used in nano second 123648864
+average time used in nano second 129949552
+average time used in nano second 118090116
+average time used in nano second 131280256
+average time used in nano second 129781287
+average time used in nano second 121132535
+average time used in nano second 134449282
+result for 10 thread
+average time used in nano second 121001234
+average time used in nano second 106551351
+average time used in nano second 145183061
+average time used in nano second 122671629
+average time used in nano second 131651015
+average time used in nano second 107761903
+average time used in nano second 151560267
+result for 11 thread
+average time used in nano second 151800551
+average time used in nano second 152411769
+average time used in nano second 145002467
+average time used in nano second 147862887
+average time used in nano second 148400978
+average time used in nano second 160752862
+average time used in nano second 160861057
+result for 12 thread
+average time used in nano second 178231833
+average time used in nano second 135101453
+average time used in nano second 165411945
+average time used in nano second 141953375
+average time used in nano second 153603499
+average time used in nano second 169743424
+average time used in nano second 181711880
+
+
+running for 8 nodes
+result for 2 thread
+average time used in nano second 1007
+average time used in nano second 698
+average time used in nano second 756
+average time used in nano second 756
+average time used in nano second 693
+average time used in nano second 737
+average time used in nano second 723
+average time used in nano second 666
+result for 3 thread
+average time used in nano second 28113241
+average time used in nano second 37113431
+average time used in nano second 26211101
+average time used in nano second 20513794
+average time used in nano second 27857217
+average time used in nano second 29221426
+average time used in nano second 37021272
+average time used in nano second 39912512
+result for 4 thread
+average time used in nano second 40050959
+average time used in nano second 40152567
+average time used in nano second 39953478
+average time used in nano second 40250683
+average time used in nano second 38553005
+average time used in nano second 40252523
+average time used in nano second 39952952
+average time used in nano second 41152713
+result for 5 thread
+average time used in nano second 54821260
+average time used in nano second 52523248
+average time used in nano second 46392199
+average time used in nano second 56023750
+average time used in nano second 54323003
+average time used in nano second 51620888
+average time used in nano second 52821236
+average time used in nano second 58222970
+result for 6 thread
+average time used in nano second 62791560
+average time used in nano second 68393172
+average time used in nano second 60692370
+average time used in nano second 60292102
+average time used in nano second 67291341
+average time used in nano second 62421514
+average time used in nano second 60891453
+average time used in nano second 79301420
+result for 7 thread
+average time used in nano second 82991452
+average time used in nano second 97669386
+average time used in nano second 95241694
+average time used in nano second 83892149
+average time used in nano second 91160841
+average time used in nano second 97951817
+average time used in nano second 93693285
+average time used in nano second 103501487
+result for 8 thread
+average time used in nano second 112420466
+average time used in nano second 99310632
+average time used in nano second 115720018
+average time used in nano second 107551949
+average time used in nano second 115950321
+average time used in nano second 106850631
+average time used in nano second 130402280
+average time used in nano second 142760708
+result for 9 thread
+average time used in nano second 116761210
+average time used in nano second 118659295
+average time used in nano second 127311255
+average time used in nano second 127411416
+average time used in nano second 123561134
+average time used in nano second 134711116
+average time used in nano second 133131080
+average time used in nano second 143233552
+result for 10 thread
+average time used in nano second 109202143
+average time used in nano second 112361402
+average time used in nano second 113401495
+average time used in nano second 105554517
+average time used in nano second 132603666
+average time used in nano second 131752005
+average time used in nano second 134050568
+average time used in nano second 134751906
+result for 11 thread
+average time used in nano second 150341922
+average time used in nano second 146641285
+average time used in nano second 126182471
+average time used in nano second 135181760
+average time used in nano second 135211123
+average time used in nano second 144629864
+average time used in nano second 134191686
+average time used in nano second 153491854
+result for 12 thread
+average time used in nano second 177771766
+average time used in nano second 162631661
+average time used in nano second 161131014
+average time used in nano second 180772315
+average time used in nano second 171971629
+average time used in nano second 176171638
+average time used in nano second 152123176
+average time used in nano second 184340384

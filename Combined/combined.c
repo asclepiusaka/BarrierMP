@@ -57,7 +57,7 @@ int main(int argc, char** argv){
 
         /* The barrier*/
         int i;
-        for(i=0;i<10000;i++) {
+        for(i=0;i<100;i++) {
 
             gtmp_barrier();
             if (thread_num == 0) {
@@ -85,7 +85,7 @@ int main(int argc, char** argv){
         duration.tv_sec--;
         duration.tv_nsec += 1000000000;
     }
-    printf("average time used in nano second %ld\n",(duration.tv_sec*100000+duration.tv_nsec/10000));
+    printf("average time used in nano second %ld\n",(duration.tv_sec*10000000+duration.tv_nsec/100));
 
     return 0;
 

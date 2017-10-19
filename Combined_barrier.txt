@@ -1,0 +1,29 @@
+======== Combined barrier ========
+running for 8 nodes
+result for 10 thread
+average time used in nano second 109202143
+average time used in nano second 112361402
+average time used in nano second 113401495
+average time used in nano second 105554517
+average time used in nano second 132603666
+average time used in nano second 131752005
+average time used in nano second 134050568
+average time used in nano second 134751906
+result for 11 thread
+average time used in nano second 150341922
+average time used in nano second 146641285
+average time used in nano second 126182471
+average time used in nano second 135181760
+average time used in nano second 135211123
+average time used in nano second 144629864
+average time used in nano second 134191686
+average time used in nano second 153491854
+result for 12 thread
+average time used in nano second 177771766
+average time used in nano second 162631661
+average time used in nano second 161131014
+average time used in nano second 180772315
+average time used in nano second 171971629
+average time used in nano second 176171638
+average time used in nano second 152123176
+average time used in nano second 184340384

@@ -1,0 +1,15 @@
+======== OpenMP_mcs ========
+result for 2 threads
+average time used in nano second 7079
+result for 3 threads
+average time used in nano second 11174
+result for 4 threads
+average time used in nano second 15827
+result for 5 threads
+average time used in nano second 20486
+result for 6 threads
+average time used in nano second 23836
+result for 7 threads
+average time used in nano second 26772
+result for 8 threads
+average time used in nano second 27077
