@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include <math.h>
 #include <mpi.h>
-#define _POSIX_C_SOURCE >= 199309L
-#include <time.h>
 
 int P;
 int logP;
@@ -29,7 +27,6 @@ void mpi_dis_finalize() {
 }
 
 int main(int argc, char** argv) {
-  int req_processes = 6;
   MPI_Init(&argc, &argv);
 
   /* Start of Parallel...*/
@@ -38,31 +35,16 @@ int main(int argc, char** argv) {
   MPI_Comm_size(MPI_COMM_WORLD, &P);
   MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 
-  if(P != req_processes){
-    fprintf(stderr, "Wrong number of processes.  Required: %d, Actual: %d\n",
-    req_processes, P);
-    exit(1);
-  }
-  struct timespec start, end, duration;
-  clock_gettime(CLOCK_MONOTONIC, &start);
+  double t1, t2;
+  t1 = MPI_Wtime();
 
   for (int i = 0; i < 1000; i++) {
     mpi_dis_barrier();
   }
 
-  clock_gettime(CLOCK_MONOTONIC, &end);
+  t2 = MPI_Wtime();
 
-  duration.tv_sec =  end.tv_sec - start.tv_sec;
-  duration.tv_nsec = end.tv_nsec - start.tv_nsec;
-  while (duration.tv_nsec > 1000000000) {
-    duration.tv_sec++;
-    duration.tv_nsec -= 1000000000;
-  }
-  while (duration.tv_nsec < 0) {
-    duration.tv_sec--;
-    duration.tv_nsec += 1000000000;
-  }
-  printf("Average time used in nano second %ld\n", (duration.tv_sec*100000+duration.tv_nsec/10000));
+  printf("Average time used in micro second %f\n", (t2 - t1) * 1000000);
    /*
 FILE *file = fopen("output", "a");
    mpi_dis_init();
