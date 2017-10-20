@@ -1,6 +1,7 @@
 OMPFLAGS = -g -Wall -fopenmp -LEVEL1_DCACHE_LINESIZE=`getconf LEVEL1_DCACHE_LINESIZE`
 OMPLIBS = -lgomp -lm
 CC = gcc
+all: test_count test_mcs
 
 test_count: runtest.c gtmp_count_barrier.c
 	$(CC) $(OMPFLAGS) -o $@ $^ $(OMPLIBS)
