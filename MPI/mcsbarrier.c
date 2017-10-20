@@ -59,9 +59,6 @@ void mpi_mcs_barrier(MPI_Comm comm, int rank, int num_processes) {
             MPI_Send(NULL, 0, MPI_INT, child_rank, 1, comm);
         }
     }
-    // The barrier did work, but it's too fast that some printing jobs before the barrier may not have finished yet.
-    // So we need to slow down explicitly to clearly see the effect of the barrier
-    for (int i = 0; i < 2000; i++);
 }
 
 void mpi_mcs_finalize() {
