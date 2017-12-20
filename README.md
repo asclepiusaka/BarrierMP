@@ -1,11 +1,16 @@
 # BarrierMP
-## TODO:
-1. Modify main to meet the paper experiments
-2. Design experiments.
-3. Read Jinx and write script and test scripts.
-4. Run jobs
-5. Collect and process data
-6. Write up experiment report
+## Description
+This is project 2 of CS 6210, Advanced Operating System, several barriers are implemented using OpenMP and MPI, and synchronize between multiple threads and machines.
+different barrier implementations follow the paper [Algorithms for Scalable Synchronization on Shared Memory Multiprocessors](https://www.cs.rice.edu/~johnmc/papers/tocs91.pdf)
 
-## experiments strategy:
-run makefile as interactive job, and then batch test through warpper script. 
+two barriers implemented with OpenMP are:
+* Count Barrier
+* MCS Barrier
+
+two barriers implemented with MPI are:
+* MCS Barrier
+* Dissemination Barrier
+
+Finally OpenMP MCS Barrier and MPI Dissemination Barrier are combined in an MPI-OpenMP combined program in order to synchronize between multiple cluster nodes that are each running multiple threads.
+
+these programs are tested on Georgia Tech's Jinx cluster.
