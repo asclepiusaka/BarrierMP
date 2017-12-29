@@ -1,6 +1,7 @@
 //
 // Created by saka on 10/4/17.
-//
+// a simple sense-reversing barrier implemented in c, to work with openMP. It's naive and easy to understand but demonstrate my understanding about
+// multithreading implementation, a more sophisticated barrier implementation can be found in gtmp_tree_barrier.c in the same directory.
 #include "gtmp.h"
 #include <stdlib.h>
 #include <stdio.h>
